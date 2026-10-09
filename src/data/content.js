@@ -43,7 +43,7 @@ export const ABOUT = {
     { label: 'Degree', value: 'B.Tech, Computer Science and Engineering' },
     { label: 'College', value: "St. Joseph's College of Engineering and Technology" },
     { label: 'Graduation', value: '2023 – 2027' },
-    { label: 'CGPA', value: '9.06' },
+    { label: 'CGPA', value: '7.27' },
     { label: 'Based in', value: 'Kerala, India' },
   ],
 }
