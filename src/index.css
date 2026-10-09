@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #080808;
+  }
+
+  body {
+    @apply bg-ink font-sans text-white antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: #b51220;
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid #e5384a;
+    outline-offset: 3px;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-[90rem] px-5 sm:px-8 lg:px-12;
+  }
+
+  .section-y {
+    @apply py-20 md:py-28;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold tracking-wide transition duration-300;
+  }
+
+  .btn-primary {
+    @apply btn bg-crimson text-white hover:bg-crimson-ember hover:shadow-[0_0_32px_rgba(181,18,32,0.55)];
+  }
+
+  .btn-ghost {
+    @apply btn border border-white/25 text-white hover:border-crimson-ember hover:text-crimson-ember;
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-full border border-white/20 px-4 py-1.5 text-sm text-white/90 transition duration-300 hover:-translate-y-0.5 hover:border-crimson-ember hover:bg-crimson/15 hover:text-white;
+  }
+
+  .panel {
+    @apply rounded-2xl border border-white/10 bg-surface p-6 md:p-8;
+  }
+}
